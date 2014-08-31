@@ -16,7 +16,7 @@ node default {
     javahome    => '/opt/java',
     proxy          => {
       scheme       => 'http',
-      proxyName    => '192.168.33.10',
+      proxyName    => $::ipaddress_eth1,
       proxyPort    => '80',
     },
   }
@@ -33,7 +33,7 @@ node default {
 
   nginx::resource::vhost { '192.168.33.10':
     ensure               => present,
-    server_name          => [ 'stash', 'stash.home', 'stash.example.com', '192.168.33.10' ],
+    server_name          => [ $::ipaddress_eth1, $::fqdn, $hostname ],
     listen_port          => '80',
     proxy                => 'http://stash',
     proxy_read_timeout   => '300',

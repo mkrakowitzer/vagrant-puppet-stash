@@ -1,5 +1,5 @@
 modules
-files
+files/*.gz
 Puppetfile.lock
 .librarian/
 .tmp/
