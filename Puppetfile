@@ -12,11 +12,14 @@ mod 'puppetlabs-stdlib',
 mod 'mkrakowitzer-deploy',
   :git => "https://github.com/mkrakowitzer/puppet-deploy.git"
 
+mod 'brycejohnson-jira',
+  :git => "https://github.com/brycejohnson/puppet-jira.git"
+
 mod 'mkrakowitzer-stash',
   :git => "https://github.com/mkrakowitzer/puppet-stash.git"
 
-mod 'yguenane-repoforge',
-  :git => "https://github.com/Mylezeem/puppet-repoforge.git"
+mod 'mkrakowitzer-confluence',
+  :git => "https://github.com/mkrakowitzer/puppet-confluence.git"
 
-mode 'jfryman/nginx',
+mod 'jfryman/nginx',
   :git => "https://github.com/jfryman/puppet-nginx.git"
