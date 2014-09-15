@@ -18,9 +18,9 @@ Download jdk-7u65-linux-x64.tar.gz from here and copy into files directory:
 http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
  
 ```sh
-vagrant up stash1 (CentOS 6)
-vagrant up stash2 (CentOS 5)
-vagrant up stash3 (Ubuntu 12.04)
+vagrant up stash1 (CentOS 6) (http://192.168.33.10)
+vagrant up stash2 (CentOS 5) (http://192.168.33.11)
+vagrant up stash3 (Ubuntu 12.04) (http://192.168.33.12)
 ```
 
 License

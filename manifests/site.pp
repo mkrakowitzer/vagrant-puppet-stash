@@ -2,6 +2,10 @@ node default {
 
   class { 'nginx': } ->
 
+  class { 'postgresql::globals':
+    manage_package_repo => true,
+    version             => '9.3',
+  }->
   class { 'postgresql::server': } ->
 
   deploy::file { 'jdk-7u65-linux-x64.tar.gz':
@@ -12,6 +16,7 @@ node default {
   } ->
 
   class { 'stash':
+    version     => '3.3.0',
     downloadURL => 'http://localhost/',
     javahome    => '/opt/java',
     proxy          => {
@@ -20,6 +25,9 @@ node default {
       proxyPort    => '80',
     },
   }
+
+  class { 'stash::gc': }
+  class { 'stash::facts': }
 
   nginx::resource::vhost { 'all':
     server_name      => [ 'localhost', '127.0.0.1' ],
